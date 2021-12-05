@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.HumorSnack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.Activities.Splash_Activity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.Activities.MainActivity" />
+        <activity android:name=".ui.Activities.Video_Play_Activity" />
+        <activity android:name=".ui.Activities.Humor_Show_Activity" />
+        <activity android:name=".ui.Activities.AdLib_Show_Activity" />
+        <activity android:name=".ui.Activities.FanArt_Show_Activity" />
+        <activity android:name=".ui.Activities.Favorite_Show_Activity" />
+        <activity android:name=".ui.Activities.Login_Activity" />
+        <activity android:name=".ui.Activities.Find_ID_Activity" />
+        <activity android:name=".ui.Activities.Find_PW_Activity" />
+        <activity android:name=".ui.Activities.Join_Activity" />
+        <activity android:name=".ui.Activities.Favorite_Activity" />
+        <activity android:name=".ui.Fragments.Video_Fragment" />
+        <activity android:name=".ui.Fragments.Video_Sub_Fragment" />
+        <activity android:name=".ui.Fragments.Humor_Fragment" />
+        <activity android:name=".ui.Fragments.AdLib_Fragment" />
+        <activity android:name=".ui.Fragments.AdLib_Ch_Fragment" />
+        <activity android:name=".ui.Fragments.AdLib_Rk_Fragment" />
+        <activity android:name=".ui.Fragments.AdLib_Rk_Sub_Fragment" />
+        <activity android:name=".ui.Fragments.FanArt_Fragment" />
+        <activity android:name=".ui.Fragments.MyPage_Fragment" />
+    </application>
+
+</manifest>

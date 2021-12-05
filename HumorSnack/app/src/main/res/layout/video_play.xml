@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEEDCC">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/video_bottom_view">
+
+                <androidx.appcompat.widget.Toolbar
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:background="@drawable/video_toolbar"/>
+
+                <TextView
+                    android:id="@+id/video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="날짜"/>
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/exoPlayerView"
+                    android:layout_width="400dp"
+                    android:layout_height="225dp"
+                    android:layout_gravity="center"
+                    app:show_buffering="when_playing"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
+                        <ImageButton
+                            android:id="@+id/like_img"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/like" />
+
+                        <TextView
+                            android:id="@+id/video_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/ad"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/first"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="40dp">
+
+                                <TextView
+                                    android:id="@+id/first_nick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="아이디"
+                                    android:textColor="@android:color/holo_orange_dark"
+                                    android:textSize="12dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/first_reply"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="댓글"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="15dp"/>
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@drawable/like"/>
+
+                                        <TextView
+                                            android:id="@+id/first_like"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:text="조회수"
+                                            android:textSize="10dp"
+                                            android:textColor="@android:color/holo_red_light"/>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/second"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="40dp">
+
+                                <TextView
+                                    android:id="@+id/second_nick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="아이디"
+                                    android:textColor="@android:color/holo_orange_dark"
+                                    android:textSize="12dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/second_reply"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="댓글"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="15dp"/>
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@drawable/like"/>
+
+                                        <TextView
+                                            android:id="@+id/second_like"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:text="조회수"
+                                            android:textSize="10dp"
+                                            android:textColor="@android:color/holo_red_light"/>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/third"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="40dp">
+
+                                <TextView
+                                    android:id="@+id/third_nick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="아이디"
+                                    android:textColor="@android:color/holo_orange_dark"
+                                    android:textSize="12dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/third_reply"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="댓글"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="15dp"/>
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@drawable/like"/>
+
+                                        <TextView
+                                            android:id="@+id/third_like"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:text="조회수"
+                                            android:textSize="10dp"
+                                            android:textColor="@android:color/holo_red_light"/>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center|center_vertical"
+            android:layout_above="@+id/video_bottom_view">
+
+                <ImageView
+                    android:id="@+id/comment_icon"
+                    android:background="@drawable/comment"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"/>
+
+                <TextView
+                    android:id="@+id/reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="댓글 전체보기"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/video_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/video_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="unlabeled"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="#FFFFFF"
+            app:menu="@menu/bottombar_menu2"/>
+
+</RelativeLayout>

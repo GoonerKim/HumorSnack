@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="video">
+        <item>최신순</item>
+        <item>인기순</item>
+        <item>오래된순</item>
+    </string-array>
+    
+</resources>
